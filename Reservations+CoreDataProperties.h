@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSDate *startDate;
 @property (nullable, nonatomic, retain) NSDate *endDate;
 @property (nullable, nonatomic, retain) Rooms *room;
-@property (nullable, nonatomic, retain) Guest *newRelationship;
+@property (nullable, nonatomic, retain) Guest *guest;
 
 @end
 

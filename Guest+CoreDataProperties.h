@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Guest (CoreDataProperties)
 
 @property (nullable, nonatomic, retain) NSString *name;
-@property (nullable, nonatomic, retain) NSManagedObject *reservation;
+@property (nullable, nonatomic, retain) Reservations *reservation;
 
 @end
 

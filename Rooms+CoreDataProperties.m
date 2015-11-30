@@ -17,6 +17,6 @@
 @dynamic rate;
 @dynamic roomNumber;
 @dynamic hotel;
-@dynamic reservations;
+@dynamic reservation;
 
 @end

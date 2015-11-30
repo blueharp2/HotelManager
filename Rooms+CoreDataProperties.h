@@ -18,8 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSNumber *numberOfBeds;
 @property (nullable, nonatomic, retain) NSNumber *rate;
 @property (nullable, nonatomic, retain) NSNumber *roomNumber;
-@property (nullable, nonatomic, retain) NSManagedObject *hotel;
-@property (nullable, nonatomic, retain) NSManagedObject *reservations;
+@property (nullable, nonatomic, retain) Hotel *hotel;
+@property (nullable, nonatomic, retain) Reservations *reservation;
 
 @end
 

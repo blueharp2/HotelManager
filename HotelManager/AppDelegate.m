@@ -25,11 +25,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self setupRootViewController];
+    
+    
     return YES;
 }
 
--(void) setupRootViewController{
+-(void)setupRootViewController{
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     self.viewController = [[ViewController alloc]init];
     self.navigationController = [[UINavigationController alloc]initWithRootViewController:self.viewController];
@@ -37,7 +39,7 @@
     self.viewController.view.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = self.navigationController;
     
-   // [self.window.makeKeyAndVisible];
+    [self.window makeKeyAndVisible];
                    
 }
 

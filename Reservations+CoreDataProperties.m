@@ -16,6 +16,6 @@
 @dynamic startDate;
 @dynamic endDate;
 @dynamic room;
-@dynamic newRelationship;
+@dynamic guest;
 
 @end
