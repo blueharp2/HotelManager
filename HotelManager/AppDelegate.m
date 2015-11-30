@@ -7,8 +7,17 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+
+#import "Hotel.h"
+#import "Rooms.h"
+#import "Reservations.h"
+#import "Guest.h"
 
 @interface AppDelegate ()
+
+@property(strong,nonatomic) ViewController *viewController;
+@property(strong,nonatomic) UINavigationController *navigationController;
 
 @end
 
@@ -18,6 +27,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     return YES;
+}
+
+-(void) setupRootViewController{
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    self.viewController = [[ViewController alloc]init];
+    self.navigationController = [[UINavigationController alloc]initWithRootViewController:self.viewController];
+    
+    self.viewController.view.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = self.navigationController;
+    
+   // [self.window.makeKeyAndVisible];
+                   
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
