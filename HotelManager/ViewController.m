@@ -32,6 +32,46 @@
     [self.navigationItem setTitle:@"Hotel Manager"];
 }
 -(void)setupCustomLayout{
+    float navigationBarHeight = CGRectGetHeight(self.navigationController.navigationBar.frame);
+    
+    UIButton *browseButton = [[UIButton alloc]init];
+    UIButton *bookButton = [[UIButton alloc]init];
+    UIButton *lookupButton = [[UIButton alloc]init];
+    
+    [browseButton setTitle:@"Browse" forState:UIControlStateNormal];
+    [bookButton setTitle:@"Book" forState:UIControlStateNormal];
+    [lookupButton setTitle:@"Look Up Reservation" forState:UIControlStateNormal];
+    
+    [browseButton setBackgroundColor:[UIColor colorWithRed:22 green:160 blue:133 alpha:1.0]];
+    [bookButton setBackgroundColor:[UIColor colorWithRed:41 green:128 blue:185 alpha:1.0]];
+    [lookupButton setBackgroundColor:[UIColor colorWithRed:46 green:204 blue:113 alpha:1.0]];
+    
+    [browseButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [bookButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [lookupButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    [browseButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [bookButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [lookupButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    NSLayoutConstraint *browseButtonLeading = [NSLayoutConstraint constraintWithItem:bookButton attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *browseButtonTop = [NSLayoutConstraint constraintWithItem:browseButton attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:64.0];
+    NSLayoutConstraint *browseButtonTrailing = [NSLayoutConstraint constraintWithItem:browseButton attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0.0];
+    
+    NSLayoutConstraint *bookButtonLeading = [NSLayoutConstraint constraintWithItem:bookButton attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *bookButtonCenterY = [NSLayoutConstraint constraintWithItem:bookButton attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:navigationBarHeight / 1.4];
+    NSLayoutConstraint *bookButtonTrailing = [NSLayoutConstraint constraintWithItem:bookButton attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutAttributeTrailing toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0.0];
+    
+    NSLayoutConstraint *lookupButtonLeading = [NSLayoutConstraint constraintWithItem:lookupButton attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *lookupButtionBottom = [NSLayoutConstraint constraintWithItem:lookupButton attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *lookupButtonTrailing = [NSLayoutConstraint constraintWithItem:lookupButton attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0.0];
+    
+    //equal heigt
+    NSLayoutConstraint *bookButtonHeight = [NSLayoutConstraint constraintWithItem:bookButton attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:0.3 constant:0.0];
+    NSLayoutConstraint *browsebuttonHeigth = [NSLayoutConstraint constraintWithItem:browseButton attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:0.3 constant:0.0];
+    NSLayoutConstraint *lookupButtonHeight = [NSLayoutConstraint constraintWithItem:lookupButton attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:0.3 constant:0.0];
+    
+    
     
 }
 
