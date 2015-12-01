@@ -7,6 +7,7 @@
 //
 
 #import "DateViewController.h"
+#import "AvailabilityViewController.h"
 
 @interface DateViewController ()
 
@@ -82,7 +83,10 @@
                 [self presentViewController:alertControllerBadStartDate animated:YES completion:nil];
         
             } else {
-                
+               AvailabilityViewController *availabilityViewController = [[AvailabilityViewController alloc]init];
+                availabilityViewController.startDate = startDate;
+                availabilityViewController.endDate = endDate;
+                [self.navigationController pushViewController: availabilityViewController animated:YES];
             }
         
         // Valid, check for dates to make sure start date is greater then end date....

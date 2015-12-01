@@ -29,6 +29,7 @@
 		90D02BB31C0D40A2006601FF /* RoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D02BB21C0D40A2006601FF /* RoomViewController.m */; };
 		90D02BB51C0D46CD006601FF /* room.png in Resources */ = {isa = PBXBuildFile; fileRef = 90D02BB41C0D46CD006601FF /* room.png */; };
 		90FE74071C0E441200ADE2C9 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FE74061C0E441200ADE2C9 /* DateViewController.m */; };
+		90FE740A1C0E5FCC00ADE2C9 /* AvailabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FE74091C0E5FCC00ADE2C9 /* AvailabilityViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,8 @@
 		90D02BB41C0D46CD006601FF /* room.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = room.png; sourceTree = "<group>"; };
 		90FE74051C0E441200ADE2C9 /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
 		90FE74061C0E441200ADE2C9 /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
+		90FE74081C0E5FCC00ADE2C9 /* AvailabilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvailabilityViewController.h; sourceTree = "<group>"; };
+		90FE74091C0E5FCC00ADE2C9 /* AvailabilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvailabilityViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,8 @@
 				90D02BB21C0D40A2006601FF /* RoomViewController.m */,
 				90FE74051C0E441200ADE2C9 /* DateViewController.h */,
 				90FE74061C0E441200ADE2C9 /* DateViewController.m */,
+				90FE74081C0E5FCC00ADE2C9 /* AvailabilityViewController.h */,
+				90FE74091C0E5FCC00ADE2C9 /* AvailabilityViewController.m */,
 				90D02B901C0D0D01006601FF /* Model */,
 				90D02B421C0D03D6006601FF /* Supporting Files */,
 			);
@@ -357,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90D02B891C0D0CCF006601FF /* Guest.m in Sources */,
+				90FE740A1C0E5FCC00ADE2C9 /* AvailabilityViewController.m in Sources */,
 				90D02B8B1C0D0CCF006601FF /* Rooms.m in Sources */,
 				90D02BA71C0D14C1006601FF /* Reservations+CoreDataProperties.m in Sources */,
 				90D02BAE1C0D33C1006601FF /* HotelViewController.m in Sources */,
