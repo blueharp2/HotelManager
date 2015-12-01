@@ -25,6 +25,8 @@
 		90D02BA91C0D14C1006601FF /* Rooms+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D02BA51C0D14C1006601FF /* Rooms+CoreDataProperties.m */; };
 		90D02BAB1C0D1625006601FF /* hotels.json in Resources */ = {isa = PBXBuildFile; fileRef = 90D02BAA1C0D1625006601FF /* hotels.json */; };
 		90D02BAE1C0D33C1006601FF /* HotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D02BAD1C0D33C1006601FF /* HotelViewController.m */; };
+		90D02BB01C0D3EA3006601FF /* hotel.png in Resources */ = {isa = PBXBuildFile; fileRef = 90D02BAF1C0D3EA3006601FF /* hotel.png */; };
+		90D02BB31C0D40A2006601FF /* RoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D02BB21C0D40A2006601FF /* RoomViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,9 @@
 		90D02BAA1C0D1625006601FF /* hotels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hotels.json; sourceTree = "<group>"; };
 		90D02BAC1C0D33C1006601FF /* HotelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelViewController.h; sourceTree = "<group>"; };
 		90D02BAD1C0D33C1006601FF /* HotelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelViewController.m; sourceTree = "<group>"; };
+		90D02BAF1C0D3EA3006601FF /* hotel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotel.png; sourceTree = "<group>"; };
+		90D02BB11C0D40A2006601FF /* RoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomViewController.h; sourceTree = "<group>"; };
+		90D02BB21C0D40A2006601FF /* RoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +141,8 @@
 				90D02B491C0D03D6006601FF /* ViewController.m */,
 				90D02BAC1C0D33C1006601FF /* HotelViewController.h */,
 				90D02BAD1C0D33C1006601FF /* HotelViewController.m */,
+				90D02BB11C0D40A2006601FF /* RoomViewController.h */,
+				90D02BB21C0D40A2006601FF /* RoomViewController.m */,
 				90D02B901C0D0D01006601FF /* Model */,
 				90D02B421C0D03D6006601FF /* Supporting Files */,
 			);
@@ -147,6 +154,7 @@
 			children = (
 				90D02BAA1C0D1625006601FF /* hotels.json */,
 				90D02B531C0D03D7006601FF /* LaunchScreen.storyboard */,
+				90D02BAF1C0D3EA3006601FF /* hotel.png */,
 				90D02B511C0D03D7006601FF /* Assets.xcassets */,
 				90D02B561C0D03D7006601FF /* Info.plist */,
 				90D02B431C0D03D6006601FF /* main.m */,
@@ -311,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90D02BB01C0D3EA3006601FF /* hotel.png in Resources */,
 				90D02BAB1C0D1625006601FF /* hotels.json in Resources */,
 				90D02B551C0D03D7006601FF /* LaunchScreen.storyboard in Resources */,
 				90D02B521C0D03D7006601FF /* Assets.xcassets in Resources */,
@@ -349,6 +358,7 @@
 				90D02B4A1C0D03D7006601FF /* ViewController.m in Sources */,
 				90D02B471C0D03D6006601FF /* AppDelegate.m in Sources */,
 				90D02B8D1C0D0CCF006601FF /* Hotel.m in Sources */,
+				90D02BB31C0D40A2006601FF /* RoomViewController.m in Sources */,
 				90D02B8F1C0D0CCF006601FF /* Reservations.m in Sources */,
 				90D02B441C0D03D6006601FF /* main.m in Sources */,
 			);
