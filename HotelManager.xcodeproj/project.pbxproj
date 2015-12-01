@@ -23,6 +23,7 @@
 		90D02BA71C0D14C1006601FF /* Reservations+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D02BA11C0D14C1006601FF /* Reservations+CoreDataProperties.m */; };
 		90D02BA81C0D14C1006601FF /* Hotel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D02BA31C0D14C1006601FF /* Hotel+CoreDataProperties.m */; };
 		90D02BA91C0D14C1006601FF /* Rooms+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D02BA51C0D14C1006601FF /* Rooms+CoreDataProperties.m */; };
+		90D02BAB1C0D1625006601FF /* hotels.json in Resources */ = {isa = PBXBuildFile; fileRef = 90D02BAA1C0D1625006601FF /* hotels.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		90D02BA31C0D14C1006601FF /* Hotel+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Hotel+CoreDataProperties.m"; sourceTree = "<group>"; };
 		90D02BA41C0D14C1006601FF /* Rooms+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Rooms+CoreDataProperties.h"; sourceTree = "<group>"; };
 		90D02BA51C0D14C1006601FF /* Rooms+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Rooms+CoreDataProperties.m"; sourceTree = "<group>"; };
+		90D02BAA1C0D1625006601FF /* hotels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hotels.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 		90D02B421C0D03D6006601FF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				90D02BAA1C0D1625006601FF /* hotels.json */,
 				90D02B531C0D03D7006601FF /* LaunchScreen.storyboard */,
 				90D02B511C0D03D7006601FF /* Assets.xcassets */,
 				90D02B561C0D03D7006601FF /* Info.plist */,
@@ -303,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90D02BAB1C0D1625006601FF /* hotels.json in Resources */,
 				90D02B551C0D03D7006601FF /* LaunchScreen.storyboard in Resources */,
 				90D02B521C0D03D7006601FF /* Assets.xcassets in Resources */,
 			);
