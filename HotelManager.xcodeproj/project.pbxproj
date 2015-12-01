@@ -24,6 +24,7 @@
 		90D02BA81C0D14C1006601FF /* Hotel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D02BA31C0D14C1006601FF /* Hotel+CoreDataProperties.m */; };
 		90D02BA91C0D14C1006601FF /* Rooms+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D02BA51C0D14C1006601FF /* Rooms+CoreDataProperties.m */; };
 		90D02BAB1C0D1625006601FF /* hotels.json in Resources */ = {isa = PBXBuildFile; fileRef = 90D02BAA1C0D1625006601FF /* hotels.json */; };
+		90D02BAE1C0D33C1006601FF /* HotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D02BAD1C0D33C1006601FF /* HotelViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		90D02BA41C0D14C1006601FF /* Rooms+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Rooms+CoreDataProperties.h"; sourceTree = "<group>"; };
 		90D02BA51C0D14C1006601FF /* Rooms+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Rooms+CoreDataProperties.m"; sourceTree = "<group>"; };
 		90D02BAA1C0D1625006601FF /* hotels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hotels.json; sourceTree = "<group>"; };
+		90D02BAC1C0D33C1006601FF /* HotelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelViewController.h; sourceTree = "<group>"; };
+		90D02BAD1C0D33C1006601FF /* HotelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 				90D02B461C0D03D6006601FF /* AppDelegate.m */,
 				90D02B481C0D03D6006601FF /* ViewController.h */,
 				90D02B491C0D03D6006601FF /* ViewController.m */,
+				90D02BAC1C0D33C1006601FF /* HotelViewController.h */,
+				90D02BAD1C0D33C1006601FF /* HotelViewController.m */,
 				90D02B901C0D0D01006601FF /* Model */,
 				90D02B421C0D03D6006601FF /* Supporting Files */,
 			);
@@ -336,6 +341,7 @@
 				90D02B891C0D0CCF006601FF /* Guest.m in Sources */,
 				90D02B8B1C0D0CCF006601FF /* Rooms.m in Sources */,
 				90D02BA71C0D14C1006601FF /* Reservations+CoreDataProperties.m in Sources */,
+				90D02BAE1C0D33C1006601FF /* HotelViewController.m in Sources */,
 				90D02BA61C0D14C1006601FF /* Guest+CoreDataProperties.m in Sources */,
 				90D02BA91C0D14C1006601FF /* Rooms+CoreDataProperties.m in Sources */,
 				90D02B501C0D03D7006601FF /* HotelManager.xcdatamodeld in Sources */,

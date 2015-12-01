@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "HotelViewController.h"
 
 @interface ViewController ()
 
@@ -63,7 +64,7 @@
     NSLayoutConstraint *bookButtonTrailing = [NSLayoutConstraint constraintWithItem:bookButton attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutAttributeTrailing toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0.0];
     
     NSLayoutConstraint *lookupButtonLeading = [NSLayoutConstraint constraintWithItem:lookupButton attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0.0];
-    NSLayoutConstraint *lookupButtionBottom = [NSLayoutConstraint constraintWithItem:lookupButton attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *lookupButtonBottom = [NSLayoutConstraint constraintWithItem:lookupButton attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0];
     NSLayoutConstraint *lookupButtonTrailing = [NSLayoutConstraint constraintWithItem:lookupButton attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0.0];
     
     //equal heigt
@@ -71,7 +72,45 @@
     NSLayoutConstraint *browsebuttonHeigth = [NSLayoutConstraint constraintWithItem:browseButton attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:0.3 constant:0.0];
     NSLayoutConstraint *lookupButtonHeight = [NSLayoutConstraint constraintWithItem:lookupButton attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeHeight multiplier:0.3 constant:0.0];
     
+    [self.view addSubview:browseButton];
+    [self.view addSubview:bookButton];
+    [self.view addSubview:lookupButton];
     
+    //Activate Constraints
+    browseButtonLeading.active = YES;
+    browseButtonTop.active = YES;
+    browseButtonTrailing.active = YES;
+    
+    bookButtonLeading.active = YES;
+    bookButtonCenterY.active = YES;
+    bookButtonTrailing.active = YES;
+    
+    lookupButtonLeading.active = YES;
+    lookupButtonBottom.active = YES;
+    lookupButtonTrailing.active = YES;
+    
+    //Heights
+    browsebuttonHeigth.active = YES;
+    bookButtonHeight.active = YES;
+    lookupButtonHeight.active = YES;
+    
+    //set up Actions
+    
+    [browseButton addTarget:self action:@selector(browseButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
+    [bookButton addTarget:self action:@selector(bookButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
+    [lookupButton addTarget:self action:@selector(lookupButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+}
+
+-(void)browseButtonSelected:(UIButton *) sender{
+    [self.navigationController pushViewController:[[HotelViewController alloc]init] animated:YES];
+}
+-(void)bookButtonSelected:(UIButton *) sender{
+    
+}
+
+-(void)lookupButtonSelected:(UIButton *) sender{
     
 }
 
