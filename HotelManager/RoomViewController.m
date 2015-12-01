@@ -59,7 +59,38 @@
     bottom.active = YES;
 
 }
+#pragma mark -UITableView DataSource
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [self.hotel.rooms count];
+}
 
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+    if (! cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    Rooms *room = (Rooms *) [self.hotel.rooms allObjects][indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"Room: %i( %i beds, $%0.2f per night)", room.numberOfBeds.intValue, room.roomNumber.intValue, room.rate.floatValue];
+    
+    return cell;
+    
+}
+
+#pragma mark - UITableViewDelegate
+-(CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 150.0;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIImage *headerImage = [UIImage imageNamed:@"room"];
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:headerImage];
+    
+    imageView.frame = CGRectMake(0.0, 0.0, CGRectGetWidth(self.view.frame), 150.0);
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageView.clipsToBounds = YES;
+    return imageView;
+}
 
 
 @end

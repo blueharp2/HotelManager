@@ -10,6 +10,8 @@
 //
 
 #import "Rooms.h"
+#import "Reservations.h"
+#import "Hotel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -27,6 +27,7 @@
 		90D02BAE1C0D33C1006601FF /* HotelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D02BAD1C0D33C1006601FF /* HotelViewController.m */; };
 		90D02BB01C0D3EA3006601FF /* hotel.png in Resources */ = {isa = PBXBuildFile; fileRef = 90D02BAF1C0D3EA3006601FF /* hotel.png */; };
 		90D02BB31C0D40A2006601FF /* RoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D02BB21C0D40A2006601FF /* RoomViewController.m */; };
+		90D02BB51C0D46CD006601FF /* room.png in Resources */ = {isa = PBXBuildFile; fileRef = 90D02BB41C0D46CD006601FF /* room.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		90D02BAF1C0D3EA3006601FF /* hotel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hotel.png; sourceTree = "<group>"; };
 		90D02BB11C0D40A2006601FF /* RoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomViewController.h; sourceTree = "<group>"; };
 		90D02BB21C0D40A2006601FF /* RoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomViewController.m; sourceTree = "<group>"; };
+		90D02BB41C0D46CD006601FF /* room.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = room.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		90D02B421C0D03D6006601FF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				90D02BB41C0D46CD006601FF /* room.png */,
 				90D02BAA1C0D1625006601FF /* hotels.json */,
 				90D02B531C0D03D7006601FF /* LaunchScreen.storyboard */,
 				90D02BAF1C0D3EA3006601FF /* hotel.png */,
@@ -320,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90D02BB01C0D3EA3006601FF /* hotel.png in Resources */,
+				90D02BB51C0D46CD006601FF /* room.png in Resources */,
 				90D02BAB1C0D1625006601FF /* hotels.json in Resources */,
 				90D02B551C0D03D7006601FF /* LaunchScreen.storyboard in Resources */,
 				90D02B521C0D03D7006601FF /* Assets.xcassets in Resources */,

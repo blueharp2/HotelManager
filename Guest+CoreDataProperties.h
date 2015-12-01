@@ -10,6 +10,7 @@
 //
 
 #import "Guest.h"
+#import "Reservations.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

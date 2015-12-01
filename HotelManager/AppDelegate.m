@@ -85,7 +85,7 @@
         if (isSaved) {
             NSLog(@"Saved sucessfully.");
         }else {
-            NSLog(@"@",saveError.localizedDescription);
+            NSLog(@"%@",saveError.localizedDescription);
         }
     }
 }
