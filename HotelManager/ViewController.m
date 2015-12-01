@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self setupViewController];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,9 +43,9 @@
     [bookButton setTitle:@"Book" forState:UIControlStateNormal];
     [lookupButton setTitle:@"Look Up Reservation" forState:UIControlStateNormal];
     
-    [browseButton setBackgroundColor:[UIColor colorWithRed:22 green:160 blue:133 alpha:1.0]];
-    [bookButton setBackgroundColor:[UIColor colorWithRed:41 green:128 blue:185 alpha:1.0]];
-    [lookupButton setBackgroundColor:[UIColor colorWithRed:46 green:204 blue:113 alpha:1.0]];
+    [browseButton setBackgroundColor:[UIColor colorWithRed:1.0 green:1.0 blue:0.76 alpha:1.0]];
+    [bookButton setBackgroundColor:[UIColor colorWithRed:1.0 green:0.91 blue:0.76 alpha:1.0]];
+    [lookupButton setBackgroundColor:[UIColor colorWithRed:0.85 green:0.91 blue:0.76 alpha:1.0]];
     
     [browseButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [bookButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -55,7 +55,7 @@
     [bookButton setTranslatesAutoresizingMaskIntoConstraints:NO];
     [lookupButton setTranslatesAutoresizingMaskIntoConstraints:NO];
     
-    NSLayoutConstraint *browseButtonLeading = [NSLayoutConstraint constraintWithItem:bookButton attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *browseButtonLeading = [NSLayoutConstraint constraintWithItem:browseButton attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0.0];
     NSLayoutConstraint *browseButtonTop = [NSLayoutConstraint constraintWithItem:browseButton attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:64.0];
     NSLayoutConstraint *browseButtonTrailing = [NSLayoutConstraint constraintWithItem:browseButton attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0.0];
     

@@ -26,10 +26,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupRootViewController];
+    [self bootstrapApp];
     
     
     return YES;
 }
+
 
 -(void)setupRootViewController{
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
@@ -61,30 +63,33 @@
         
         if(jsonError){ NSLog(@"Error serializing JSON");return;}
         
-        hotels = rootObject[@"Hotel"];
+        hotels = rootObject[@"Hotels"];
         
         for (NSDictionary *hotel in hotels) {
             Hotel *newHotel = [NSEntityDescription insertNewObjectForEntityForName:@"Hotel" inManagedObjectContext:self.managedObjectContext];
             newHotel.name = hotel[@"name"];
             newHotel.location = hotel[@"location"];
             newHotel.stars = hotel[@"stars"];
+            
             rooms = hotel[@"rooms"];
             
             for (NSDictionary *room in rooms) {
-                Rooms *newRoom = [NSEntityDescription insertNewObjectForEntityForName:@"Room" inManagedObjectContext:self.managedObjectContext];
+                Rooms *newRoom = [NSEntityDescription insertNewObjectForEntityForName:@"Rooms" inManagedObjectContext:self.managedObjectContext];
                 
                 newRoom.roomNumber = room[@"number"];
                 newRoom.rate = room[@"rate"];
                 newRoom.numberOfBeds = room[@"beds"];
                 newRoom.hotel = newHotel;
+                
             }
         }
+        
         NSError *saveError;
         BOOL (isSaved) = [self.managedObjectContext save:&saveError];
         
         if (isSaved) {
             NSLog(@"Saved sucessfully.");
-        }else {
+        } else {
             NSLog(@"%@",saveError.localizedDescription);
         }
     }
