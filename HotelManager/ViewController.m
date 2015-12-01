@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "HotelViewController.h"
+#import "DateViewController.h"
 
 @interface ViewController ()
 
@@ -107,6 +108,7 @@
     [self.navigationController pushViewController:[[HotelViewController alloc]init] animated:YES];
 }
 -(void)bookButtonSelected:(UIButton *) sender{
+    [self.navigationController pushViewController:[[DateViewController alloc]init] animated:YES];
     
 }
 
