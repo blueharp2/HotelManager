@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "HotelViewController.h"
 #import "DateViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -24,6 +25,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupViewController];
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    AppDelegate *delegate = (AppDelegate *) [[UIApplication sharedApplication]delegate];
+    
+    NSManagedObjectContext *context = delegate.managedObjectContext;
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Guest"];
+    
+    NSArray *guest = [context executeFetchRequest:request error:nil];
+    
+    NSLog(@"%lu", guest.count);
+    
 }
 
 - (void)didReceiveMemoryWarning {
