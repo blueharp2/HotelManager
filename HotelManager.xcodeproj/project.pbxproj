@@ -28,6 +28,7 @@
 		90D02BB01C0D3EA3006601FF /* hotel.png in Resources */ = {isa = PBXBuildFile; fileRef = 90D02BAF1C0D3EA3006601FF /* hotel.png */; };
 		90D02BB31C0D40A2006601FF /* RoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D02BB21C0D40A2006601FF /* RoomViewController.m */; };
 		90D02BB51C0D46CD006601FF /* room.png in Resources */ = {isa = PBXBuildFile; fileRef = 90D02BB41C0D46CD006601FF /* room.png */; };
+		90E44BC81C0FAC230091AE6A /* NSObject+NSObject_NSManagedObjectContex_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E44BC71C0FAC230091AE6A /* NSObject+NSObject_NSManagedObjectContex_Category.m */; };
 		90FE74071C0E441200ADE2C9 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FE74061C0E441200ADE2C9 /* DateViewController.m */; };
 		90FE740A1C0E5FCC00ADE2C9 /* AvailabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FE74091C0E5FCC00ADE2C9 /* AvailabilityViewController.m */; };
 		90FE740D1C0E6E1000ADE2C9 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FE740C1C0E6E1000ADE2C9 /* BookViewController.m */; };
@@ -90,6 +91,8 @@
 		90D02BB11C0D40A2006601FF /* RoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomViewController.h; sourceTree = "<group>"; };
 		90D02BB21C0D40A2006601FF /* RoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomViewController.m; sourceTree = "<group>"; };
 		90D02BB41C0D46CD006601FF /* room.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = room.png; sourceTree = "<group>"; };
+		90E44BC61C0FAC230091AE6A /* NSObject+NSObject_NSManagedObjectContex_Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSObject_NSManagedObjectContex_Category.h"; sourceTree = "<group>"; };
+		90E44BC71C0FAC230091AE6A /* NSObject+NSObject_NSManagedObjectContex_Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSObject_NSManagedObjectContex_Category.m"; sourceTree = "<group>"; };
 		90FE74051C0E441200ADE2C9 /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
 		90FE74061C0E441200ADE2C9 /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
 		90FE74081C0E5FCC00ADE2C9 /* AvailabilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvailabilityViewController.h; sourceTree = "<group>"; };
@@ -146,6 +149,7 @@
 		90D02B411C0D03D6006601FF /* HotelManager */ = {
 			isa = PBXGroup;
 			children = (
+				90E44BC91C0FACEF0091AE6A /* Categories */,
 				90D02B451C0D03D6006601FF /* AppDelegate.h */,
 				90D02B461C0D03D6006601FF /* AppDelegate.m */,
 				90D02B481C0D03D6006601FF /* ViewController.h */,
@@ -229,6 +233,15 @@
 			);
 			name = Entities;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		90E44BC91C0FACEF0091AE6A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				90E44BC61C0FAC230091AE6A /* NSObject+NSObject_NSManagedObjectContex_Category.h */,
+				90E44BC71C0FAC230091AE6A /* NSObject+NSObject_NSManagedObjectContex_Category.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E44BC81C0FAC230091AE6A /* NSObject+NSObject_NSManagedObjectContex_Category.m in Sources */,
 				90D02B891C0D0CCF006601FF /* Guest.m in Sources */,
 				90FE740A1C0E5FCC00ADE2C9 /* AvailabilityViewController.m in Sources */,
 				90D02B8B1C0D0CCF006601FF /* Rooms.m in Sources */,
