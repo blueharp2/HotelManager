@@ -12,6 +12,7 @@
 #import "Rooms.h"
 #import "Hotel.h"
 #import "Guest.h"
+#import "BookViewController.h"
 
 
 
@@ -107,6 +108,17 @@
 }
 
 #pragma mark - UITableViewDelegate
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    Rooms *room = self.dataSource[indexPath.row];
+    
+    BookViewController *bookViewController = [[BookViewController alloc]init];
+    bookViewController.room = room;
+    bookViewController.startDate = self.startDate;
+    bookViewController.endDate = self.endDate;
+    
+    [self.navigationController pushViewController:bookViewController animated:YES];
+}
+
 -(CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 150.0;
 }
