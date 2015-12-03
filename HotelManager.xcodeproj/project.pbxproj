@@ -55,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90BBD5221C10F67F0056338D /* HotelManager_2.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HotelManager_2.0.xcdatamodel; sourceTree = "<group>"; };
 		90D02B3F1C0D03D6006601FF /* HotelManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D02B431C0D03D6006601FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90D02B451C0D03D6006601FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -660,9 +661,10 @@
 		90D02B4E1C0D03D7006601FF /* HotelManager.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				90BBD5221C10F67F0056338D /* HotelManager_2.0.xcdatamodel */,
 				90D02B4F1C0D03D7006601FF /* HotelManager.xcdatamodel */,
 			);
-			currentVersion = 90D02B4F1C0D03D7006601FF /* HotelManager.xcdatamodel */;
+			currentVersion = 90BBD5221C10F67F0056338D /* HotelManager_2.0.xcdatamodel */;
 			path = HotelManager.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

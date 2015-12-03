@@ -177,7 +177,11 @@
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIImage *headerImage = [UIImage imageNamed:@"hotel"];
+    Hotel *hotel = [self.fetchResultsController objectAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
+    
+    NSLog(@"%@", hotel.imageName);
+    
+    UIImage *headerImage = [UIImage imageNamed:hotel.imageName];
     UIImageView *imageView = [[UIImageView alloc]initWithImage:headerImage];
     
     imageView.frame = CGRectMake(0.0, 0.0, CGRectGetWidth(self.view.frame), 150.0);
