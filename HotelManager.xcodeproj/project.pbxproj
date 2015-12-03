@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9019D7001C11048D00DBC6AC /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9019D6FE1C11048D00DBC6AC /* Fabric.framework */; };
+		9019D7011C11048E00DBC6AC /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9019D6FF1C11048D00DBC6AC /* Crashlytics.framework */; };
 		90D02B441C0D03D6006601FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D02B431C0D03D6006601FF /* main.m */; };
 		90D02B471C0D03D6006601FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D02B461C0D03D6006601FF /* AppDelegate.m */; };
 		90D02B4A1C0D03D7006601FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D02B491C0D03D6006601FF /* ViewController.m */; };
@@ -55,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9019D6FE1C11048D00DBC6AC /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		9019D6FF1C11048D00DBC6AC /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		90BBD5221C10F67F0056338D /* HotelManager_2.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HotelManager_2.0.xcdatamodel; sourceTree = "<group>"; };
 		90D02B3F1C0D03D6006601FF /* HotelManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D02B431C0D03D6006601FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9019D7011C11048E00DBC6AC /* Crashlytics.framework in Frameworks */,
+				9019D7001C11048D00DBC6AC /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +149,8 @@
 				90D02B5E1C0D03D7006601FF /* HotelManagerTests */,
 				90D02B691C0D03D7006601FF /* HotelManagerUITests */,
 				90D02B401C0D03D6006601FF /* Products */,
+				9019D6FE1C11048D00DBC6AC /* Fabric.framework */,
+				9019D6FF1C11048D00DBC6AC /* Crashlytics.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,6 +278,7 @@
 				90D02B3B1C0D03D6006601FF /* Sources */,
 				90D02B3C1C0D03D6006601FF /* Frameworks */,
 				90D02B3D1C0D03D6006601FF /* Resources */,
+				9019D6FD1C11040800DBC6AC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -389,6 +398,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9019D6FD1C11040800DBC6AC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 34d09e55343bccd01d861865726b7ad0cbec8fd8 9046b36a91fd10d4fcb46bbaeac06718aaf33d83f42549d59c35ca4abaddfd91";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		90D02B3B1C0D03D6006601FF /* Sources */ = {
@@ -548,6 +573,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HotelManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -560,6 +589,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HotelManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

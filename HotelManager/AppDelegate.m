@@ -14,6 +14,10 @@
 #import "Reservations.h"
 #import "Guest.h"
 
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
+
 @interface AppDelegate ()
 
 @property(strong,nonatomic) ViewController *viewController;
@@ -29,6 +33,8 @@
     
 //    [self bootstrapApp];
 //    [self addImageNameString];
+    [Fabric with:@[[Crashlytics class]]];
+
     
     return YES;
 }
