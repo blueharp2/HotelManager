@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Guest.h"
+
+
 
 @interface LookupReservation : NSObject
++(BOOL) lookupReservationWithName: (NSString *)searchText;
 
 @end

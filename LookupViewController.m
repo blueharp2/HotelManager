@@ -12,6 +12,7 @@
 #import "Guest.h"
 #import "Rooms.h"
 #import "Hotel.h"
+#include "LookupReservation.h"
 
 
 
@@ -102,19 +103,23 @@
 
 #pragma mark - UISearchBarDelegate
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
-    NSString *searchText = searchBar.text;
-    NSManagedObjectContext *context = [NSManagedObjectContext managerContext];
     
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Reservations"];
-    request.predicate = [NSPredicate predicateWithFormat:@"guest.name == %@", searchText];
+    [LookupReservation lookupReservationWithName:searchBar.text];
     
-    NSError *error;
-    NSArray *results = [context executeFetchRequest:request error:&error];
     
-    if (!error) {
-        self.datasource = results;
-        
-    }
+//    NSString *searchText = searchBar.text;
+//    NSManagedObjectContext *context = [NSManagedObjectContext managerContext];
+//    
+//    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Reservations"];
+//    request.predicate = [NSPredicate predicateWithFormat:@"guest.name == %@", searchText];
+//    
+//    NSError *error;
+//    NSArray *results = [context executeFetchRequest:request error:&error];
+//    
+//    if (!error) {
+//        self.datasource = results;
+//        
+//    }
 
 }
 
