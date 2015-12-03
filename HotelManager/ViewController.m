@@ -12,6 +12,9 @@
 #import "AppDelegate.h"
 #import "LookupViewController.h"
 
+#import <Crashlytics/Crashlytics.h>
+
+
 @interface ViewController ()
 
 @end
@@ -26,7 +29,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupViewController];
+    
+    UIButton* button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = CGRectMake(20, 50, 100, 30);
+    [button setTitle:@"Crash" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(crashButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+
 }
+- (IBAction)crashButtonTapped:(id)sender {
+    [[Crashlytics sharedInstance] crash];
+}
+
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     AppDelegate *delegate = (AppDelegate *) [[UIApplication sharedApplication]delegate];
@@ -130,5 +145,7 @@
 -(void)lookupButtonSelected:(UIButton *) sender{
     [self.navigationController pushViewController:[[LookupViewController alloc]init] animated:YES];
 }
+
+
 
 @end
