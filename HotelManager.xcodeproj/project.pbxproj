@@ -29,6 +29,9 @@
 		90D02BB31C0D40A2006601FF /* RoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D02BB21C0D40A2006601FF /* RoomViewController.m */; };
 		90D02BB51C0D46CD006601FF /* room.png in Resources */ = {isa = PBXBuildFile; fileRef = 90D02BB41C0D46CD006601FF /* room.png */; };
 		90E44BC81C0FAC230091AE6A /* NSObject+NSObject_NSManagedObjectContex_Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E44BC71C0FAC230091AE6A /* NSObject+NSObject_NSManagedObjectContex_Category.m */; };
+		90E44BCC1C0FAEB00091AE6A /* LookupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E44BCB1C0FAEB00091AE6A /* LookupViewController.m */; };
+		90E44BCF1C0FBEBF0091AE6A /* ReservationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E44BCE1C0FBEBF0091AE6A /* ReservationService.m */; };
+		90E44BD21C0FC6CF0091AE6A /* LookupReservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E44BD11C0FC6CF0091AE6A /* LookupReservation.m */; };
 		90FE74071C0E441200ADE2C9 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FE74061C0E441200ADE2C9 /* DateViewController.m */; };
 		90FE740A1C0E5FCC00ADE2C9 /* AvailabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FE74091C0E5FCC00ADE2C9 /* AvailabilityViewController.m */; };
 		90FE740D1C0E6E1000ADE2C9 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FE740C1C0E6E1000ADE2C9 /* BookViewController.m */; };
@@ -93,6 +96,12 @@
 		90D02BB41C0D46CD006601FF /* room.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = room.png; sourceTree = "<group>"; };
 		90E44BC61C0FAC230091AE6A /* NSObject+NSObject_NSManagedObjectContex_Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSObject_NSManagedObjectContex_Category.h"; sourceTree = "<group>"; };
 		90E44BC71C0FAC230091AE6A /* NSObject+NSObject_NSManagedObjectContex_Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSObject_NSManagedObjectContex_Category.m"; sourceTree = "<group>"; };
+		90E44BCA1C0FAEB00091AE6A /* LookupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LookupViewController.h; path = ../LookupViewController.h; sourceTree = "<group>"; };
+		90E44BCB1C0FAEB00091AE6A /* LookupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LookupViewController.m; path = ../LookupViewController.m; sourceTree = "<group>"; };
+		90E44BCD1C0FBEBF0091AE6A /* ReservationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReservationService.h; sourceTree = "<group>"; };
+		90E44BCE1C0FBEBF0091AE6A /* ReservationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReservationService.m; sourceTree = "<group>"; };
+		90E44BD01C0FC6CF0091AE6A /* LookupReservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookupReservation.h; sourceTree = "<group>"; };
+		90E44BD11C0FC6CF0091AE6A /* LookupReservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookupReservation.m; sourceTree = "<group>"; };
 		90FE74051C0E441200ADE2C9 /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
 		90FE74061C0E441200ADE2C9 /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
 		90FE74081C0E5FCC00ADE2C9 /* AvailabilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvailabilityViewController.h; sourceTree = "<group>"; };
@@ -164,6 +173,8 @@
 				90FE74091C0E5FCC00ADE2C9 /* AvailabilityViewController.m */,
 				90FE740B1C0E6E1000ADE2C9 /* BookViewController.h */,
 				90FE740C1C0E6E1000ADE2C9 /* BookViewController.m */,
+				90E44BCA1C0FAEB00091AE6A /* LookupViewController.h */,
+				90E44BCB1C0FAEB00091AE6A /* LookupViewController.m */,
 				90D02B901C0D0D01006601FF /* Model */,
 				90D02B421C0D03D6006601FF /* Supporting Files */,
 			);
@@ -240,6 +251,10 @@
 			children = (
 				90E44BC61C0FAC230091AE6A /* NSObject+NSObject_NSManagedObjectContex_Category.h */,
 				90E44BC71C0FAC230091AE6A /* NSObject+NSObject_NSManagedObjectContex_Category.m */,
+				90E44BCD1C0FBEBF0091AE6A /* ReservationService.h */,
+				90E44BCE1C0FBEBF0091AE6A /* ReservationService.m */,
+				90E44BD01C0FC6CF0091AE6A /* LookupReservation.h */,
+				90E44BD11C0FC6CF0091AE6A /* LookupReservation.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -384,9 +399,11 @@
 				90FE740A1C0E5FCC00ADE2C9 /* AvailabilityViewController.m in Sources */,
 				90D02B8B1C0D0CCF006601FF /* Rooms.m in Sources */,
 				90D02BA71C0D14C1006601FF /* Reservations+CoreDataProperties.m in Sources */,
+				90E44BCC1C0FAEB00091AE6A /* LookupViewController.m in Sources */,
 				90D02BAE1C0D33C1006601FF /* HotelViewController.m in Sources */,
 				90D02BA61C0D14C1006601FF /* Guest+CoreDataProperties.m in Sources */,
 				90D02BA91C0D14C1006601FF /* Rooms+CoreDataProperties.m in Sources */,
+				90E44BD21C0FC6CF0091AE6A /* LookupReservation.m in Sources */,
 				90D02B501C0D03D7006601FF /* HotelManager.xcdatamodeld in Sources */,
 				90FE74071C0E441200ADE2C9 /* DateViewController.m in Sources */,
 				90D02BA81C0D14C1006601FF /* Hotel+CoreDataProperties.m in Sources */,
@@ -396,6 +413,7 @@
 				90D02BB31C0D40A2006601FF /* RoomViewController.m in Sources */,
 				90D02B8F1C0D0CCF006601FF /* Reservations.m in Sources */,
 				90D02B441C0D03D6006601FF /* main.m in Sources */,
+				90E44BCF1C0FBEBF0091AE6A /* ReservationService.m in Sources */,
 				90FE740D1C0E6E1000ADE2C9 /* BookViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

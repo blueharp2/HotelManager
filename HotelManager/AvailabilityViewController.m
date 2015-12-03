@@ -36,7 +36,9 @@
         NSMutableArray *unavailableRooms = [[NSMutableArray alloc]init];
         
         for (Reservations *reservation in results) {
-            [unavailableRooms addObject:reservation.room];
+            if (reservation.room != nil){
+                [unavailableRooms addObject:reservation.room];
+            }
         }
         NSFetchRequest *checkRequest = [NSFetchRequest fetchRequestWithEntityName:@"Rooms"];
         checkRequest.predicate =[NSPredicate predicateWithFormat:@"NOT self IN %@", unavailableRooms];

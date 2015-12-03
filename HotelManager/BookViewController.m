@@ -13,7 +13,8 @@
 #import "Reservations.h"
 #import "AvailabilityViewController.h"
 #import "AppDelegate.h"
-
+#import "ReservationService.h"
+#import "NSObject+NSObject_NSManagedObjectContex_Category.h"
 
 @interface BookViewController ()
 
@@ -85,32 +86,44 @@
 }
 -(void)saveButtonSelected:(UIBarButtonItem *)sender{
     
-    AppDelegate *delegate = (AppDelegate *) [[UIApplication sharedApplication]delegate];
+ 
+    BOOL isSuccessful;
     
-    NSManagedObjectContext *context = delegate.managedObjectContext;
+   isSuccessful = [ReservationService bookNewReservationWithStartDate:self.startDate endDate:self.endDate inRoom:self.room guestName:self.namefield.text];
     
-    Reservations *reservation = [NSEntityDescription insertNewObjectForEntityForName:@"Reservations" inManagedObjectContext:context
-                                 ];
-    reservation.startDate = self.startDate;
-    reservation.endDate = self.endDate;
-    reservation.room = self.room;
-    
-    self.room.reservation = reservation;
-    
-    Guest *guest = [NSEntityDescription insertNewObjectForEntityForName:@"Guest" inManagedObjectContext:context];
-    
-    guest.name = self.namefield.text;
-    reservation.guest = guest;
-   
-    NSError *sendError;
-    [context save:&sendError];
-    if (sendError) {
-        NSLog(@"Error when saving");
-        
-    }else {
-        
+    if (isSuccessful) {
         [self.navigationController popToRootViewControllerAnimated:YES];
+    } else {
+        NSLog(@"Fail");
     }
+    
+    
+//    AppDelegate *delegate = (AppDelegate *) [[UIApplication sharedApplication]delegate];
+//    
+//    NSManagedObjectContext *context = delegate.managedObjectContext;
+//    
+//    Reservations *reservation = [NSEntityDescription insertNewObjectForEntityForName:@"Reservations" inManagedObjectContext:context
+//                                 ];
+//    reservation.startDate = self.startDate;
+//    reservation.endDate = self.endDate;
+//    reservation.room = self.room;
+//    
+//    self.room.reservation = reservation;
+//    
+//    Guest *guest = [NSEntityDescription insertNewObjectForEntityForName:@"Guest" inManagedObjectContext:context];
+//    
+//    guest.name = self.namefield.text;
+//    reservation.guest = guest;
+//   
+//    NSError *sendError;
+//    [context save:&sendError];
+//    if (sendError) {
+//        NSLog(@"Error when saving");
+//        
+//    }else {
+//        
+//
+//    }
     
 }
 
