@@ -27,8 +27,9 @@
 
 -(void) setDatasource:(NSArray *)datasource {
     _datasource = datasource;
-    
-    [self.tableView reloadData];
+
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    [self.tableView reloadData];
 }
 
 -(void)loadView{
@@ -57,8 +58,8 @@
     self.tableView.dataSource = self;
     self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
     
-    [self.view addSubview:self.tableView];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.view addSubview:self.tableView];
     
     NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:self.tableView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0.0];
     NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.tableView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0];
@@ -103,24 +104,7 @@
 
 #pragma mark - UISearchBarDelegate
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
-    
-    [LookupReservation lookupReservationWithName:searchBar.text];
-    
-    
-//    NSString *searchText = searchBar.text;
-//    NSManagedObjectContext *context = [NSManagedObjectContext managerContext];
-//    
-//    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Reservations"];
-//    request.predicate = [NSPredicate predicateWithFormat:@"guest.name == %@", searchText];
-//    
-//    NSError *error;
-//    NSArray *results = [context executeFetchRequest:request error:&error];
-//    
-//    if (!error) {
-//        self.datasource = results;
-//        
-//    }
-
+    self.datasource = [LookupReservation lookupReservationWithName:searchBar.text];
 }
 
 

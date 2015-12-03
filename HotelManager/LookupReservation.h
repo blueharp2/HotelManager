@@ -12,6 +12,7 @@
 
 
 @interface LookupReservation : NSObject
-+(BOOL) lookupReservationWithName: (NSString *)searchText;
+
++ (NSArray *) lookupReservationWithName: (NSString *)searchText;
 
 @end

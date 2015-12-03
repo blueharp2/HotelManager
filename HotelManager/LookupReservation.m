@@ -14,23 +14,24 @@
 
 @implementation LookupReservation
 
-+(BOOL) lookupReservationWithName: (NSString *)searchText {
++ (NSArray *) lookupReservationWithName: (NSString *) searchText {
     
-NSManagedObjectContext *context = [NSManagedObjectContext managerContext];
-
-NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Reservations"];
-request.predicate = [NSPredicate predicateWithFormat:@"guest.name == %@", searchText];
-
-NSError *error;
-NSArray *results = [context executeFetchRequest:request error:&error];
-
-if (!error) {
-   // self.datasource = results;
-    return true;
+    NSManagedObjectContext *context = [NSManagedObjectContext managerContext];
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Reservations"];
+    request.predicate = [NSPredicate predicateWithFormat:@"guest.name == %@", searchText];
+    
+    NSError *error;
+    NSArray *results = [context executeFetchRequest:request error:&error];
+    
+    if (!error) {
+        
+        return results;
+        
     } else {
-    return false;
+        
+        return nil;
+        
     }
-    
-    //pass the results array back to the LookupViewController??
 }
 @end
