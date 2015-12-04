@@ -31,7 +31,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupRootViewController];
     
-//    [self bootstrapApp];
+    [self bootstrapApp];
 //    [self addImageNameString];
     [Fabric with:@[[Crashlytics class]]];
 
